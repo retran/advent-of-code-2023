@@ -1,4 +1,8 @@
-﻿void Part01()
+﻿// Advent of Code 2023
+// https://adventofcode.com/2023/day/1
+// Solved with JetBrains AI
+
+void Part01()
 {
     var lines = File.ReadAllLines("calibration.txt");
     var sum = 0;
@@ -82,7 +86,8 @@ void Part02()
 
             foreach (var spelledOutDigit in spelledOutDigits)
                 if (i - spelledOutDigit.Key.Length + 1 >= 0 &&
-                    line.Substring(i - spelledOutDigit.Key.Length + 1, spelledOutDigit.Key.Length) == spelledOutDigit.Key)
+                    line.Substring(i - spelledOutDigit.Key.Length + 1, spelledOutDigit.Key.Length) ==
+                    spelledOutDigit.Key)
                 {
                     lastDigit = spelledOutDigit.Value.ToString();
                     break;
